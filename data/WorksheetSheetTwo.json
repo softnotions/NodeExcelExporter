@@ -1,0 +1,73 @@
+{
+    "orders": {
+      "delivered": 34,
+      "cancelled": 1,
+      "total": 35
+    },
+    "financials": {
+      "item_total": 5460,
+      "cancelled_orders_amount": 160.0,
+      "packaging_and_service_charges": 0.0,
+      "discounts": 987,
+      "net_bill_value": 6900,
+      "gst_on_order": 149,
+      "total_customer_payable": 7232,
+      "total": {
+        "item_total": 8545,
+        "cancelled_orders_amount": 0.0,
+        "packaging_and_service_charges": 0.0,
+        "discounts": 1111,
+        "net_bill_value": 7282,
+        "gst_on_order": 150,
+        "total_customer_payable": 7485
+      },
+   
+        "platform_service_fee": {
+           "current_month": 1652,
+           "previous_month": 0.0,
+           "year_to_date": 1669
+        },
+        "discount_on_service_fee": {
+           "current_month": 0.0,
+           "previous_month": 0.0,
+           "year_to_date": 0.0
+        },
+        "collection_charges": {
+           "current_month": 0.0,
+           "previous_month": 0.0,
+           "year_to_date": 0.0
+        },
+        "access_charges": {
+           "current_month": 0.0,
+           "previous_month": 0.0,
+           "year_to_date": 0.0
+        },
+        "merchant_cancellation_charges": {
+           "current_month": 0.0,
+           "previous_month": 0.0,
+           "year_to_date": 0.0
+        },
+        "call_center_service_fee": {
+           "current_month": 0.0,
+           "previous_month": 0.0,
+           "year_to_date": 0.0
+        },
+        "total_service_fees_before_taxes": {
+           "current_month": 1742,
+           "previous_month": 0.0,
+           "year_to_date": 1884
+        },
+        "taxes_over_service_fee": {
+           "current_month": 319,
+           "previous_month": 0.0,
+           "year_to_date": 302
+        },
+        "total_service_fees": {
+           "current_month": 2048,
+           "previous_month": 0.0,
+           "year_to_date": 3045
+        }
+     }
+     
+  }
+  

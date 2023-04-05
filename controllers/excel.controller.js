@@ -9,11 +9,11 @@ import fs from "fs";
 import path from "path";
 
 import process from "process";
-
+//import data from json file;
+import data from '../data/WorksheetSheetThree.json' assert { type: 'json' };
 // Declared an asynchronous function named `generateExcel`.
 export const generateExcel = async (req, res) => {
-	try {
-		
+	try {		
 		// Created a new Excel workbook using the excel4node library
 		let workbook = new excel.Workbook();
 
@@ -74,7 +74,7 @@ export const generateExcel = async (req, res) => {
 			font: {
 				color: "#000000",
 				size: 30,
-				name: "Arial",
+				name: "Roboto",
 				bold: true,
 			},
 			border: {
@@ -137,7 +137,7 @@ export const generateExcel = async (req, res) => {
 			font: {
 				color: "#000000",
 				size: 15,
-				name: "Arial",
+				name: "Roboto",
 
 			},
 			alignment: {
@@ -151,7 +151,7 @@ export const generateExcel = async (req, res) => {
 				bold: true,
 				underline: false,
 				color: "#000000",
-				name: "Arial",
+				name: "Roboto",
 
 			},
 			alignment: {
@@ -190,7 +190,7 @@ export const generateExcel = async (req, res) => {
 				color: "#086AD8",
 				bold: true,
 				size: 15,
-				name: "Arial",
+				name: "Roboto",
 
 			},
 			border: {
@@ -244,7 +244,7 @@ export const generateExcel = async (req, res) => {
 				color: "#1D1D1D",
 				bold: false,
 				size: 11,
-				name:"Arial"
+				name:"Roboto"
 			},
 			alignment: {
 				wrapText: true,
@@ -258,7 +258,7 @@ export const generateExcel = async (req, res) => {
 				color: "#000000",
 				bold: true,
 				size: 18,
-				name: "Arial",
+				name: "Roboto",
 
 			},
 			border: {
@@ -286,7 +286,7 @@ export const generateExcel = async (req, res) => {
 				color: "#000000",
 				bold: true,
 				size: 15,
-				name: "Arial",
+				name: "Roboto",
 			},
 			fill: {
 				type: "pattern",
@@ -301,7 +301,7 @@ export const generateExcel = async (req, res) => {
 			font: {
 				color: "#000000",
 				size: 12,
-				name: "Arial",
+				name: "Roboto",
 
 			},
 			alignment: {
@@ -354,7 +354,7 @@ export const generateExcel = async (req, res) => {
 			font: {
 				color: "#6A6A6A",
 				size: 12,
-				name: "Arial",
+				name: "Roboto",
 			},
 		});
 
@@ -391,7 +391,7 @@ export const generateExcel = async (req, res) => {
 			font: {
 				color: "#000000",
 				size: 11,
-				name: "Arial",
+				name: "Roboto",
 			},
 		});
 
@@ -670,6 +670,7 @@ export const generateExcel = async (req, res) => {
 		worksheet3.cell(2,10,2,28,true).string("Service charges").style(style4);
 
 		// Set the height for each rows in worksheet 3
+		worksheet3.row(2).setHeight(30);
 		worksheet3.row(3).setHeight(60);
 		worksheet3.column(1).setWidth(50);
 		worksheet3.column(2).setWidth(30);
@@ -753,90 +754,39 @@ export const generateExcel = async (req, res) => {
 		worksheet3.cell(3, 30).string("Refund for Customer Complaints R3").style(style7);
 		worksheet3.cell(3, 31).string("Disputed Order Remarks").style(style12);
 		worksheet3.cell(3, 32).string("Total of Order Level Adjustments S = P + Q + R1 + R2 + R3").style(style7);
-		worksheet3.cell(4, 1).string("2022-03-06 10:12:12").style(style6);
-		worksheet3.cell(5, 1).string("2022-03-06 10:12:12").style(style6);
-		worksheet3.cell(6, 1).string("2022-03-06 10:12:12").style(style6);
-		worksheet3.cell(4, 2).string("384452632154").style(style6);
-		worksheet3.cell(5, 2).string("384452632154").style(style6);
-		worksheet3.cell(6, 2).string("384452632154").style(style6);
-		worksheet3.cell(4, 3).string("delivered").style(style6);
-		worksheet3.cell(5, 3).string("delivered").style(style6);
-		worksheet3.cell(6, 3).string("delivered").style(style6);
-		worksheet3.cell(4, 4).string("regular").style(style6);
-		worksheet3.cell(5, 4).string("regular").style(style6);
-		worksheet3.cell(6, 4).string("regular").style(style6);
-		worksheet3.cell(4, 6).string("150").style(style6);
-		worksheet3.cell(5, 6).string("150").style(style6);
-		worksheet3.cell(6, 6).string("150").style(style6);
-		worksheet3.cell(4, 7).string("0").style(style6);
-		worksheet3.cell(5, 7).string("0").style(style6);
-		worksheet3.cell(6, 7).string("0").style(style6);
-		worksheet3.cell(4, 8).string("0").style(style6);
-		worksheet3.cell(5, 8).string("45").style(style6);
-		worksheet3.cell(6, 8).string("0").style(style6);
-		worksheet3.cell(4, 9).string("0").style(style6);
-		worksheet3.cell(5, 9).string("0").style(style6);
-		worksheet3.cell(6, 9).string("0").style(style6);
-		worksheet3.cell(4, 10).string("0").style(style6);
-		worksheet3.cell(5, 10).string("47").style(style6);
-		worksheet3.cell(6, 10).string("0").style(style6);
-		worksheet3.cell(4, 11).string("150").style(style6);
-		worksheet3.cell(5, 11).string("345").style(style6);
-		worksheet3.cell(6, 11).string("69").style(style6);
-		worksheet3.cell(4, 12).string("0").style(style6);
-		worksheet3.cell(5, 12).string("6").style(style6);
-		worksheet3.cell(6, 12).string("4").style(style6);
-		worksheet3.cell(4, 13).string("150").style(style6);
-		worksheet3.cell(5, 13).string("150").style(style6);
-		worksheet3.cell(6, 13).string("150").style(style6);
-		worksheet3.cell(4, 14).string("150").style(style6);
-		worksheet3.cell(5, 14).string("150").style(style6);
-		worksheet3.cell(6, 14).string("150").style(style6);
-		worksheet3.cell(4, 15).string("24.0%").style(style6);
-		worksheet3.cell(5, 15).string("24.0%").style(style6);
-		worksheet3.cell(6, 15).string("24.0%").style(style6);
-		worksheet3.cell(4, 16).string("36").style(style6);
-		worksheet3.cell(5, 16).string("36").style(style6);
-		worksheet3.cell(6, 16).string("36").style(style6);
-		worksheet3.cell(4, 17).string("0").style(style6);
-		worksheet3.cell(5, 17).string("0").style(style6);
-		worksheet3.cell(6, 17).string("0").style(style6);
-		worksheet3.cell(4, 18).string("0").style(style6);
-		worksheet3.cell(5, 18).string("0").style(style6);
-		worksheet3.cell(6, 18).string("0").style(style6);
-		worksheet3.cell(4, 19).string("0").style(style6);
-		worksheet3.cell(5, 19).string("0").style(style6);
-		worksheet3.cell(6, 19).string("0").style(style6);
-		worksheet3.cell(4, 20).string("0").style(style6);
-		worksheet3.cell(5, 20).string("0").style(style6);
-		worksheet3.cell(6, 20).string("0").style(style6);
-		worksheet3.cell(4, 21).string("0").style(style6);
-		worksheet3.cell(5, 21).string("0").style(style6);
-		worksheet3.cell(6, 21).string("0").style(style6);
-		worksheet3.cell(4, 22).string("36").style(style6);
-		worksheet3.cell(5, 22).string("36").style(style6);
-		worksheet3.cell(6, 22).string("36").style(style6);
-		worksheet3.cell(4, 23).string("6").style(style6);
-		worksheet3.cell(5, 23).string("6").style(style6);
-		worksheet3.cell(6, 23).string("6").style(style6);
-		worksheet3.cell(4, 24).string("40").style(style6);
-		worksheet3.cell(5, 24).string("40").style(style6);
-		worksheet3.cell(6, 24).string("40").style(style6);
-		worksheet3.cell(4, 25).string("0").style(style6);
-		worksheet3.cell(5, 25).string("0").style(style6);
-		worksheet3.cell(6, 25).string("0").style(style6);
-		worksheet3.cell(4, 26).string("0").style(style6);
-		worksheet3.cell(5, 26).string("0").style(style6);
-		worksheet3.cell(6, 26).string("0").style(style6);
-		worksheet3.cell(4, 27).string("0").style(style6);
-		worksheet3.cell(5, 27).string("0").style(style6);
-		worksheet3.cell(6, 27).string("0").style(style6);
-		worksheet3.cell(4, 28).string("6").style(style6);
-		worksheet3.cell(5, 28).string("12").style(style6);
-		worksheet3.cell(6, 28).string("4").style(style6);
-		worksheet3.cell(4, 29).string("0").style(style6);
-		worksheet3.cell(5, 29).string("0").style(style6);
-		worksheet3.cell(6, 29).string("0").style(style6);
+
+
+		let rowNum = 4;
+		data.forEach((item) => {
+			worksheet3.cell(rowNum,1).string(item.order_date).style(style7);
+			worksheet3.cell(rowNum,2).number(item.order_no).style(style7);
+			worksheet3.cell(rowNum,3).string(item.order_status).style(style7);
+			worksheet3.cell(rowNum,4).string(item.order_category).style(style7);
+			worksheet3.cell(rowNum,5).number(item.item_total).style(style7);
+			worksheet3.cell(rowNum,6).number(item.packing_service_charges).style(style7);
+			worksheet3.cell(rowNum,7).number(item.merchant_discount).style(style7);
+			worksheet3.cell(rowNum,8).number(item.exclusive_offer).style(style7);
+			worksheet3.cell(rowNum,9).number(item.gst_on_order_incl_cess).style(style7);
+			worksheet3.cell(rowNum,10).number(item.customer_payable_net_bill_value_after_taxes_discount).style(style7);
+			worksheet3.cell(rowNum,11).string(item.platform_service_fee_chargeable_on).style(style7);
+			worksheet3.cell(rowNum,12).number(item.platform_service_fee_percentage).style(style7);
+			worksheet3.cell(rowNum,13).number(item.platform_service_fee).style(style7);
+			worksheet3.cell(rowNum,14).number(item.discount_on_platform_service_fee).style(style7);
+			worksheet3.cell(rowNum,15).number(item.collection_charges).style(style7);
+			worksheet3.cell(rowNum,16).number(item.access_charges).style(style7);
+			worksheet3.cell(rowNum,17).number(item.merchant_cancellation_charges).style(style7);
+			worksheet3.cell(rowNum,18).number(item.call_center_service_fees).style(style7);
+			worksheet3.cell(rowNum,19).number(item.total_service_fee_without_taxes).style(style7);
+			worksheet3.cell(rowNum,20).number(item.cash_prepayment_to_merchant).style(style7);
+			worksheet3.cell(rowNum,21).number(item.merchant_share_of_cancelled_orders).style(style7);
+			worksheet3.cell(rowNum,22).number(item.delivery_fee_sponsored_by_merchant).style(style7);
+			worksheet3.cell(rowNum,23).number(item.gst_deduction_us_9_5).style(style7);
+			worksheet3.cell(rowNum,24).number(item.refund_for_customer_complaints).style(style7);
+			worksheet3.cell(rowNum,25).string(item.disputed_order_remarks).style(style7);
+			worksheet3.cell(rowNum,26).number(item.total_order_level_adjustments).style(style7);
+			worksheet3.cell(rowNum,27).number(item.net_payable_amount_before_tcs_deduction).style(style7);
+			rowNum++
+		});
 
 		// Defined the name of the file to be generated
 		// The file extension can be changed csv or xls, but xlsx will be the better choice.
