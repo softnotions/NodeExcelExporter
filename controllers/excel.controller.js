@@ -10,7 +10,7 @@ import path from "path";
 
 import process from "process";
 //import data from json file;
-import data from '../data/WorksheetSheetThree.json' assert { type: 'json' };
+import { data } from "../data/workSheetData.js";
 // Declared an asynchronous function named `generateExcel`.
 export const generateExcel = async (req, res) => {
 	try {		
@@ -209,32 +209,6 @@ export const generateExcel = async (req, res) => {
 				top: {
 					style: "thin",
 					color: "#FFFFFF",
-				}
-			},
-		});
-
-		const style6 = workbook.createStyle({
-			alignment: {
-				wrapText: true,
-				vertical: "center",
-				horizontal:"left"
-			},
-			border: {
-				bottom: {
-					style: "thin",
-					color: "#DEDEDE",
-				},
-				left: {
-					style: "thin",
-					color: "#DEDEDE",
-				},
-				right: {
-					style: "thin",
-					color: "#DEDEDE",
-				},
-				top: {
-					style: "thin",
-					color: "#DEDEDE",
 				}
 			},
 		});
@@ -785,7 +759,7 @@ export const generateExcel = async (req, res) => {
 			worksheet3.cell(rowNum,25).string(item.disputed_order_remarks).style(style7);
 			worksheet3.cell(rowNum,26).number(item.total_order_level_adjustments).style(style7);
 			worksheet3.cell(rowNum,27).number(item.net_payable_amount_before_tcs_deduction).style(style7);
-			rowNum++
+			rowNum++;
 		});
 
 		// Defined the name of the file to be generated
